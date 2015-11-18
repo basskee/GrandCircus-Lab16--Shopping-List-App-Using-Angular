@@ -1,0 +1,77 @@
+/*======================
+========Font==========
+=======================*/
+
+h3{
+	margin-bottom: 1.5em;
+}
+
+/*======================
+========GLOBAL==========
+=======================*/
+main{
+	width:1280px;
+	height:600px;
+	border: solid thin black;
+	background-color: lightgrey;
+	margin: 0 auto;
+}
+
+body{
+	text-align: center;
+}
+
+.wrapper{
+
+	text-align: center;
+}
+/*======================
+========HEADER==========
+=======================*/
+
+/*======================
+========MAIN==========
+=======================*/
+
+.col-md-6, .col-md-3{
+	border:thin black solid;
+	height: 230px;
+	margin-top:2em;
+
+}
+
+.right-col{
+	padding:3em 2em 2em 3em;
+	text-align: left
+}
+
+ul{
+
+	list-style: none;
+}
+
+
+/*======================
+========Forms==========
+=======================*/
+
+#form-left{
+	text-align: center;
+	margin-top:5em;
+
+}
+#form-right{
+	margin-top: 5em;
+}
+
+#right-button{
+margin: .5em;
+}
+#submit{
+	margin-bottom: .5em;
+}
+
+
+/*======================
+==MEDIA QUERIES=========
+=======================*/

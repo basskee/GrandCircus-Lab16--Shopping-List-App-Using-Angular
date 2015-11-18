@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <script src="http://code.angularjs.org/1.4.7/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet"  href="style.css" >
+
+    </head>
+
+    <body ng-app="mymod" ng-controller="MyController">
+        <div id="wrapper">
+            <header>
+                <h1 id="title-main">Angular Shopping List</h1>
+            	<ul>
+
+            	</ul>
+            </header>
+            <main>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form class="form-inline" id="form-left" ng-submit="submit()" >
+                                <h3>Shopping Items</h3>
+                                <label for="exampleInputName2">Item</label>
+                                <input type="text" ng-model="addItem" name="text"class="form-control" placeholder="Item"/>
+                                <label for="exampleInputName2">Price</label>
+                                <input type="text" ng-model="addPrice" name="text" placeholder="Price"/>
+                                <input type="submit" id="submit" value="Submit" ng-click="clickToAdd()" class="btn btn-default btn-success" />
+
+                            </form>
+                        </div>
+                        <div class="col-md-3">
+                            <form class="form-inline" id="form-right" >
+                                <h3>Sort Your Items</h3>
+                                <input type="text" ng-model="itemOrPrice">
+
+                                <button class="btn btn-default btn-success" ng-click="count = count + 1" id="right-button">Sort By Item</button>
+                            </form>
+                        </div>
+                        <div class="col-md-3 right-col">
+                       
+                            <ul>
+
+                                <li ng-repeat="foodItem in shoppingList | filter: itemOrPrice | orderBy: 'item'">{{ foodItem.item | uppercase }} : {{ foodItem.price }} </li>
+
+                            </ul>
+
+                        </div>
+                    </div>            
+                </div>
+            </main>
+            <footer>
+                
+            </footer>
+        </div>
+		<script src="script.js"> </script>
+    </body>
+</html>
